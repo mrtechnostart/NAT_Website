@@ -31,7 +31,7 @@ export async function sendEmail(emailObject: emailObject) {
 
         const mailOptions = {
             from: process.env.EMAIL_FROM,
-            to: 'rambpandey238@gmail.com',
+            to: 'nattechandtechnologies@gmail.com',
             subject: 'NAT Queries',
             text: `Name: ${emailObject.name}\nEmail: ${emailObject.email}\nPhone: ${emailObject.phone}\nMessage: ${emailObject.message}`
         };

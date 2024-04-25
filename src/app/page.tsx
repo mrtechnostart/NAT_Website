@@ -12,9 +12,11 @@ export default function Page() {
           Unlock the power of cutting-edge web and mobile solutions to transform your business.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <Link href="https://drive.google.com/file/d/164bujoj0_dc6zKqHDbHztm-bjPNqgv8x/view?usp=sharing" target="_blank">
           <Button variant="dark" className="w-full sm:w-auto">
             Download Brochure
           </Button>
+          </Link>
           <Link href="/contact">
           <Button variant="outline" className="w-full sm:w-auto">
             Contact Us

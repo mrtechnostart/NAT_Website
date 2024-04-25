@@ -50,15 +50,15 @@ export default function Component() {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <MapPinIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <p className="text-gray-500 dark:text-gray-400">123 Main Street, Anytown USA</p>
+                <p className="text-gray-500 dark:text-gray-400">Avlon Rangoli, Bhiwari, Rajasthan</p>
               </div>
               <div className="flex items-center gap-2">
                 <MailIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <p className="text-gray-500 dark:text-gray-400">info@nattechnology.com</p>
+                <p className="text-gray-500 dark:text-gray-400">nattechandtechnologies@gmail.com</p>
               </div>
               <div className="flex items-center gap-2">
                 <PhoneIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <p className="text-gray-500 dark:text-gray-400">(123) 456-7890</p>
+                <p className="text-gray-500 dark:text-gray-400">+91 8383997355</p>
               </div>
             </div>
           </div>
