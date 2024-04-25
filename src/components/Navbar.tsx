@@ -20,7 +20,7 @@ export default function Navbar(){
             </Link>
             <Link
               className="inline-flex items-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-              href="#"
+              href="/project"
             >
               Projects
             </Link>

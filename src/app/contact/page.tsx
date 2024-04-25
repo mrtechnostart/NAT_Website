@@ -6,9 +6,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
 import { emailObject, sendEmail } from '@/actions/sendEmail';
+import { SentMessageInfo } from 'nodemailer';
 
 export default function Component() {
-  // Define initial state for form data
   const [formData, setFormData] = useState<emailObject>({
     name: '',
     email: '',
@@ -16,8 +16,9 @@ export default function Component() {
     message: ''
   });
 
-  // Handle input change and update form data state
-  const handleInputChange = (e:any) => {
+  const [isLoading, setIsLoading] = useState(false); // Add isLoading state
+
+  const handleInputChange = (e: any) => {
     const { id, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -25,12 +26,14 @@ export default function Component() {
     }));
   };
 
-  // Handle form submission
-  const handleSubmit =async (e:any) => {
-    e.preventDefault()
-    console.log(formData)
-    const response = await sendEmail(formData)
-    console.log(response)
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsLoading(true); // Set isLoading to true when form is submitted
+    const response: SentMessageInfo = await sendEmail(formData);
+    setIsLoading(false); // Reset isLoading to false after email sending is done
+    if (response && response.accepted.length > 0) {
+      alert('Email sent successfully');
+    }
   };
 
   return (
@@ -79,8 +82,8 @@ export default function Component() {
                 <Label htmlFor="message">Message</Label>
                 <Textarea className="min-h-[100px]" id="message" placeholder="Enter your message" value={formData.message} onChange={handleInputChange} />
               </div>
-              <Button className="w-full" type="submit">
-                Submit
+              <Button className="w-full" type="submit" disabled={isLoading}> {/* Disable button when isLoading is true */}
+                {isLoading ? 'Sending...' : 'Submit'} {/* Change button text based on isLoading */}
               </Button>
             </form>
           </div>
