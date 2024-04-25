@@ -22,7 +22,7 @@ export default function Navbar(){
               className="inline-flex items-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
               href="/project"
             >
-              Project
+              Projects
             </Link>
             <Link
               className="inline-flex items-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
@@ -40,13 +40,13 @@ export default function Navbar(){
             </SheetTrigger>
             <SheetContent side="left">
               <div className="grid gap-2 py-6">
-                <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+                <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/">
                   Home
                 </Link>
-                <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+                <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/project">
                   Projects
                 </Link>
-                <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+                <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/contact">
                   Contact
                 </Link>
               </div>
