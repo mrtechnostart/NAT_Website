@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from "next/link";
 
 // Define an array of objects representing projects
@@ -61,7 +62,7 @@ export default function Page() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full mx-auto mt-10 pb-10">
           {projects.map((project, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md dark:bg-gray-950">
-              <img
+              <Image
                 alt={project.title}
                 className="w-full h-48 object-cover"
                 height="200"
